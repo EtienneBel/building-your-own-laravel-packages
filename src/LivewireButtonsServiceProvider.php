@@ -20,9 +20,4 @@ class LivewireButtonsServiceProvider extends ServiceProvider
             __DIR__ . '/views' => resource_path('views/vendor/livewire-buttons'),
         ], 'livewire-buttons-views');
     }
-
-    public function register()
-    {
-        //
-    }
 }

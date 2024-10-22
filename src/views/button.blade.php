@@ -3,8 +3,8 @@
     wire:loading.attr="disabled"
     @class([
         'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2',
-        $getVariantClasses(),
-        $getSizeClasses(),
+        $variantClasses,
+        $sizeClasses,
         'opacity-50 cursor-not-allowed' => $disabled || $loading,
     ])
     {{ $attributes->merge(['wire:loading.class' => 'opacity-50']) }}>

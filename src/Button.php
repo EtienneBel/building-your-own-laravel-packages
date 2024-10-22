@@ -15,7 +15,7 @@ class Button extends Component
     public string $loadingText = 'Loading...';
     public string $icon = '';
 
-    protected function getVariantClasses(): string
+    public function getVariantClasses(): string
     {
         return match ($this->variant) {
             'primary' => 'bg-blue-600 hover:bg-blue-700 text-white',
@@ -27,7 +27,7 @@ class Button extends Component
         };
     }
 
-    protected function getSizeClasses(): string
+    public function getSizeClasses(): string
     {
         return match ($this->size) {
             'sm' => 'px-2 py-1 text-sm',
@@ -39,6 +39,9 @@ class Button extends Component
 
     public function render()
     {
-        return view('livewire-buttons::button');
+        return view('livewire-buttons::button', [
+            'variantClasses' => $this->getVariantClasses(),
+            'sizeClasses' => $this->getSizeClasses()
+        ]);
     }
 }
