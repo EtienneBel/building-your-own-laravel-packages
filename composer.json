@@ -2,6 +2,7 @@
     "name": "etiennebel/livewire-buttons",
     "description": "A Livewire Button component with Tailwind CSS",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "role": "Developer",
