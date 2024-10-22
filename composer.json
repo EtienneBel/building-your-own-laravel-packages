@@ -1,5 +1,5 @@
 {
-    "name": "your-vendor-name/livewire-buttons",
+    "name": "etiennebel/livewire-buttons",
     "description": "A Livewire Button component with Tailwind CSS",
     "type": "library",
     "authors": [
@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "YourVendorName\\LivewireButtons\\": "src/"
+            "EtienneBel\\LivewireButtons\\": "src/"
         }
     },
     "require": {
@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendorName\\LivewireButtons\\LivewireButtonsServiceProvider"
+                "EtienneBel\\LivewireButtons\\LivewireButtonsServiceProvider"
             ]
         }
     }
