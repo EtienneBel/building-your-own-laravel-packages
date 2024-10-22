@@ -1,8 +1,9 @@
 <?php
 
-namespace EtienneBel\LivewireButtons;
+namespace Etiennebel\LivewireButtons;
 
 use Livewire\Component;
+use Illuminate\View\ComponentAttributeBag;
 
 class Button extends Component
 {
@@ -41,7 +42,8 @@ class Button extends Component
     {
         return view('livewire-buttons::button', [
             'variantClasses' => $this->getVariantClasses(),
-            'sizeClasses' => $this->getSizeClasses()
+            'sizeClasses' => $this->getSizeClasses(),
+            'attributes' => new ComponentAttributeBag
         ]);
     }
 }
