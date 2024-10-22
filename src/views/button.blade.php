@@ -2,14 +2,10 @@
     type="{{ $type }}"
     wire:loading.attr="disabled"
     {{ $attributes->merge([
-        'class' => implode(' ', [
-            'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2',
-            $variantClasses,
-            $sizeClasses,
-            $disabled || $loading ? 'opacity-50 cursor-not-allowed' : '',
-        ]),
+        'class' => $classes,
         'wire:loading.class' => 'opacity-50'
-    ]) }}>
+    ]) }}
+    @if($disabled) disabled @endif>
     
     @if($loading)
         <svg class="animate-spin -ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -19,7 +15,7 @@
         <span>{{ $loadingText }}</span>
     @else
         @if($icon)
-            <i class="{{ $icon }} mr-2"></i>
+            <i class="{{ $icon }} mr-2" aria-hidden="true"></i>
         @endif
         <span>{{ $label }}</span>
     @endif
