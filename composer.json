@@ -1,0 +1,30 @@
+{
+    "name": "your-vendor-name/livewire-buttons",
+    "description": "A Livewire Button component with Tailwind CSS",
+    "type": "library",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Etienne BELEMGNEGRE",
+            "email": "belemgnegreetienne@gmail.com",
+            "homepage": "https://www.ebelemgnegre/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "YourVendorName\\LivewireButtons\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0",
+        "livewire/livewire": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourVendorName\\LivewireButtons\\LivewireButtonsServiceProvider"
+            ]
+        }
+    }
+}
